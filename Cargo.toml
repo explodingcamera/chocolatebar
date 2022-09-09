@@ -15,9 +15,14 @@ tauri-build = {version = "1.0.0", features = [] }
 
 [dependencies]
 anyhow = "1"
+gdkx11 = "0.15"
+gtk = "0.15"
 serde = {version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 tauri = {version = "1.0.0", features = ["api-all"] }
+
+xcb = "1.0"
+xcb-wm = {version = "0.4", features = ["ewmh"] }
 
 [features]
 # by default Tauri runs in production mode

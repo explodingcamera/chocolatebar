@@ -268,10 +268,14 @@ name = "chocolatebar"
 version = "0.0.0"
 dependencies = [
  "anyhow",
+ "gdkx11",
+ "gtk",
  "serde",
  "serde_json",
  "tauri",
  "tauri-build",
+ "xcb",
+ "xcb-wm",
 ]
 
 [[package]]
@@ -850,6 +854,20 @@ dependencies = [
  "pango-sys",
  "pkg-config",
  "system-deps 6.0.2",
+]
+
+[[package]]
+name = "gdkx11"
+version = "0.15.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e62de46d9503381e4ab0b7d7a99b1fda53bd312e19ddc4195ffbe1d76f336cf9"
+dependencies = [
+ "gdk",
+ "gdkx11-sys",
+ "gio",
+ "glib",
+ "libc",
+ "x11",
 ]
 
 [[package]]
@@ -2038,6 +2056,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0a2ca2c61bc9f3d74d2886294ab7b9853abd9c1ad903a3ac7815c58989bb7bab"
 dependencies = [
  "unicode-ident",
+]
+
+[[package]]
+name = "quick-xml"
+version = "0.22.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8533f14c8382aaad0d592c812ac3b826162128b65662331e1127b45c3d18536b"
+dependencies = [
+ "memchr",
 ]
 
 [[package]]
@@ -3707,6 +3734,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6d1526bbe5aaeb5eb06885f4d987bcdfa5e23187055de9b83fe00156a821fabc"
 dependencies = [
  "libc",
+]
+
+[[package]]
+name = "xcb"
+version = "1.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b127bf5bfe9dbb39118d6567e3773d4bbc795411a8e1ef7b7e056bccac0011a9"
+dependencies = [
+ "bitflags",
+ "libc",
+ "quick-xml",
+]
+
+[[package]]
+name = "xcb-wm"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "151d80a83742235d439cfe429fa1cf9e0fb87c272d1efb1968d1996c5f28c76d"
+dependencies = [
+ "bitflags",
+ "paste",
+ "xcb",
 ]
 
 [[package]]
